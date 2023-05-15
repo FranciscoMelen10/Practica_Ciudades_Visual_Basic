@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -42,6 +43,29 @@ Partial Class Form1
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txt_buscar = New System.Windows.Forms.TextBox()
         Me.bt_Buscar = New System.Windows.Forms.Button()
+        Me.label7 = New System.Windows.Forms.Label()
+        Me.orden_page = New System.Windows.Forms.Label()
+        Me.DataSetCiudades = New MonitoresUCA1.DataSetCiudades()
+        Me.CiudadesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CiudadesTableAdapter = New MonitoresUCA1.DataSetCiudadesTableAdapters.CiudadesTableAdapter()
+        Me.CiudadesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CiudadesBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CiudadesBindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DataSetCiudadesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CiudadesBindingSource4 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EstadoDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.ObservacionesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        CType(Me.DataSetCiudades, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CiudadesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CiudadesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CiudadesBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CiudadesBindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSetCiudadesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CiudadesBindingSource4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -132,6 +156,7 @@ Partial Class Form1
         '
         'txt_observaciones
         '
+        Me.txt_observaciones.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CiudadesBindingSource, "observaciones", True))
         Me.txt_observaciones.Location = New System.Drawing.Point(216, 242)
         Me.txt_observaciones.Name = "txt_observaciones"
         Me.txt_observaciones.Size = New System.Drawing.Size(324, 73)
@@ -140,6 +165,7 @@ Partial Class Form1
         '
         'txt_estado
         '
+        Me.txt_estado.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CiudadesBindingSource, "estado", True))
         Me.txt_estado.Location = New System.Drawing.Point(216, 183)
         Me.txt_estado.Name = "txt_estado"
         Me.txt_estado.Size = New System.Drawing.Size(324, 20)
@@ -147,6 +173,7 @@ Partial Class Form1
         '
         'txt_nombre
         '
+        Me.txt_nombre.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CiudadesBindingSource, "nombre", True))
         Me.txt_nombre.Location = New System.Drawing.Point(216, 129)
         Me.txt_nombre.Name = "txt_nombre"
         Me.txt_nombre.Size = New System.Drawing.Size(324, 20)
@@ -154,6 +181,7 @@ Partial Class Form1
         '
         'txt_id
         '
+        Me.txt_id.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CiudadesBindingSource, "id", True))
         Me.txt_id.Location = New System.Drawing.Point(216, 81)
         Me.txt_id.Name = "txt_id"
         Me.txt_id.Size = New System.Drawing.Size(324, 20)
@@ -221,11 +249,108 @@ Partial Class Form1
         Me.bt_Buscar.Text = "Buscar"
         Me.bt_Buscar.UseVisualStyleBackColor = True
         '
+        'label7
+        '
+        Me.label7.AutoSize = True
+        Me.label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
+        Me.label7.Location = New System.Drawing.Point(347, 393)
+        Me.label7.Name = "label7"
+        Me.label7.Size = New System.Drawing.Size(56, 17)
+        Me.label7.TabIndex = 20
+        Me.label7.Text = "Página:"
+        '
+        'orden_page
+        '
+        Me.orden_page.AutoSize = True
+        Me.orden_page.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
+        Me.orden_page.Location = New System.Drawing.Point(409, 393)
+        Me.orden_page.Name = "orden_page"
+        Me.orden_page.Size = New System.Drawing.Size(16, 17)
+        Me.orden_page.TabIndex = 21
+        Me.orden_page.Text = "0"
+        '
+        'DataSetCiudades
+        '
+        Me.DataSetCiudades.DataSetName = "DataSetCiudades"
+        Me.DataSetCiudades.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'CiudadesBindingSource
+        '
+        Me.CiudadesBindingSource.DataMember = "Ciudades"
+        Me.CiudadesBindingSource.DataSource = Me.DataSetCiudades
+        '
+        'CiudadesTableAdapter
+        '
+        Me.CiudadesTableAdapter.ClearBeforeFill = True
+        '
+        'CiudadesBindingSource1
+        '
+        Me.CiudadesBindingSource1.DataMember = "Ciudades"
+        Me.CiudadesBindingSource1.DataSource = Me.DataSetCiudades
+        '
+        'CiudadesBindingSource2
+        '
+        Me.CiudadesBindingSource2.DataMember = "Ciudades"
+        Me.CiudadesBindingSource2.DataSource = Me.DataSetCiudades
+        '
+        'CiudadesBindingSource3
+        '
+        Me.CiudadesBindingSource3.DataMember = "Ciudades"
+        Me.CiudadesBindingSource3.DataSource = Me.DataSetCiudades
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.EstadoDataGridViewCheckBoxColumn, Me.ObservacionesDataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.CiudadesBindingSource
+        Me.DataGridView1.Location = New System.Drawing.Point(167, 478)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(440, 150)
+        Me.DataGridView1.TabIndex = 22
+        '
+        'DataSetCiudadesBindingSource
+        '
+        Me.DataSetCiudadesBindingSource.DataSource = Me.DataSetCiudades
+        Me.DataSetCiudadesBindingSource.Position = 0
+        '
+        'CiudadesBindingSource4
+        '
+        Me.CiudadesBindingSource4.DataMember = "Ciudades"
+        Me.CiudadesBindingSource4.DataSource = Me.DataSetCiudades
+        '
+        'IdDataGridViewTextBoxColumn
+        '
+        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "id"
+        Me.IdDataGridViewTextBoxColumn.HeaderText = "id"
+        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
+        '
+        'NombreDataGridViewTextBoxColumn
+        '
+        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "nombre"
+        Me.NombreDataGridViewTextBoxColumn.HeaderText = "nombre"
+        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
+        '
+        'EstadoDataGridViewCheckBoxColumn
+        '
+        Me.EstadoDataGridViewCheckBoxColumn.DataPropertyName = "estado"
+        Me.EstadoDataGridViewCheckBoxColumn.HeaderText = "estado"
+        Me.EstadoDataGridViewCheckBoxColumn.Name = "EstadoDataGridViewCheckBoxColumn"
+        '
+        'ObservacionesDataGridViewTextBoxColumn
+        '
+        Me.ObservacionesDataGridViewTextBoxColumn.DataPropertyName = "observaciones"
+        Me.ObservacionesDataGridViewTextBoxColumn.HeaderText = "observaciones"
+        Me.ObservacionesDataGridViewTextBoxColumn.Name = "ObservacionesDataGridViewTextBoxColumn"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(800, 640)
+        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.orden_page)
+        Me.Controls.Add(Me.label7)
         Me.Controls.Add(Me.bt_Buscar)
         Me.Controls.Add(Me.txt_buscar)
         Me.Controls.Add(Me.Label6)
@@ -248,6 +373,14 @@ Partial Class Form1
         Me.Controls.Add(Me.Label1)
         Me.Name = "Form1"
         Me.Text = "Form1"
+        CType(Me.DataSetCiudades, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CiudadesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CiudadesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CiudadesBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CiudadesBindingSource3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSetCiudadesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CiudadesBindingSource4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -273,4 +406,19 @@ Partial Class Form1
     Friend WithEvents Label6 As Label
     Friend WithEvents txt_buscar As TextBox
     Friend WithEvents bt_Buscar As Button
+    Friend WithEvents label7 As Label
+    Friend WithEvents orden_page As Label
+    Friend WithEvents DataSetCiudades As DataSetCiudades
+    Friend WithEvents CiudadesBindingSource As BindingSource
+    Friend WithEvents CiudadesTableAdapter As DataSetCiudadesTableAdapters.CiudadesTableAdapter
+    Friend WithEvents CiudadesBindingSource3 As BindingSource
+    Friend WithEvents CiudadesBindingSource2 As BindingSource
+    Friend WithEvents CiudadesBindingSource1 As BindingSource
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents IdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EstadoDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents ObservacionesDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CiudadesBindingSource4 As BindingSource
+    Friend WithEvents DataSetCiudadesBindingSource As BindingSource
 End Class
