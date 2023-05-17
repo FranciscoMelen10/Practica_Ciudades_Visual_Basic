@@ -33,6 +33,8 @@ Partial Class Form1
         Me.bt_Eliminar = New System.Windows.Forms.Button()
         Me.bt_Vaciar = New System.Windows.Forms.Button()
         Me.txt_observaciones = New System.Windows.Forms.RichTextBox()
+        Me.CiudadesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSetCiudades = New MonitoresUCA1.DataSetCiudades()
         Me.txt_estado = New System.Windows.Forms.TextBox()
         Me.txt_nombre = New System.Windows.Forms.TextBox()
         Me.txt_id = New System.Windows.Forms.TextBox()
@@ -45,21 +47,20 @@ Partial Class Form1
         Me.bt_Buscar = New System.Windows.Forms.Button()
         Me.label7 = New System.Windows.Forms.Label()
         Me.orden_page = New System.Windows.Forms.Label()
-        Me.DataSetCiudades = New MonitoresUCA1.DataSetCiudades()
-        Me.CiudadesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CiudadesTableAdapter = New MonitoresUCA1.DataSetCiudadesTableAdapters.CiudadesTableAdapter()
         Me.CiudadesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.CiudadesBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.CiudadesBindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.DataSetCiudadesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CiudadesBindingSource4 = New System.Windows.Forms.BindingSource(Me.components)
         Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EstadoDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.ObservacionesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        CType(Me.DataSetCiudades, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.DataSetCiudadesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CiudadesBindingSource4 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.bt_Agregar = New System.Windows.Forms.Button()
         CType(Me.CiudadesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSetCiudades, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CiudadesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CiudadesBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CiudadesBindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -162,6 +163,16 @@ Partial Class Form1
         Me.txt_observaciones.Size = New System.Drawing.Size(324, 73)
         Me.txt_observaciones.TabIndex = 9
         Me.txt_observaciones.Text = ""
+        '
+        'CiudadesBindingSource
+        '
+        Me.CiudadesBindingSource.DataMember = "Ciudades"
+        Me.CiudadesBindingSource.DataSource = Me.DataSetCiudades
+        '
+        'DataSetCiudades
+        '
+        Me.DataSetCiudades.DataSetName = "DataSetCiudades"
+        Me.DataSetCiudades.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'txt_estado
         '
@@ -269,16 +280,6 @@ Partial Class Form1
         Me.orden_page.TabIndex = 21
         Me.orden_page.Text = "0"
         '
-        'DataSetCiudades
-        '
-        Me.DataSetCiudades.DataSetName = "DataSetCiudades"
-        Me.DataSetCiudades.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'CiudadesBindingSource
-        '
-        Me.CiudadesBindingSource.DataMember = "Ciudades"
-        Me.CiudadesBindingSource.DataSource = Me.DataSetCiudades
-        '
         'CiudadesTableAdapter
         '
         Me.CiudadesTableAdapter.ClearBeforeFill = True
@@ -309,16 +310,6 @@ Partial Class Form1
         Me.DataGridView1.Size = New System.Drawing.Size(440, 150)
         Me.DataGridView1.TabIndex = 22
         '
-        'DataSetCiudadesBindingSource
-        '
-        Me.DataSetCiudadesBindingSource.DataSource = Me.DataSetCiudades
-        Me.DataSetCiudadesBindingSource.Position = 0
-        '
-        'CiudadesBindingSource4
-        '
-        Me.CiudadesBindingSource4.DataMember = "Ciudades"
-        Me.CiudadesBindingSource4.DataSource = Me.DataSetCiudades
-        '
         'IdDataGridViewTextBoxColumn
         '
         Me.IdDataGridViewTextBoxColumn.DataPropertyName = "id"
@@ -343,11 +334,31 @@ Partial Class Form1
         Me.ObservacionesDataGridViewTextBoxColumn.HeaderText = "observaciones"
         Me.ObservacionesDataGridViewTextBoxColumn.Name = "ObservacionesDataGridViewTextBoxColumn"
         '
+        'DataSetCiudadesBindingSource
+        '
+        Me.DataSetCiudadesBindingSource.DataSource = Me.DataSetCiudades
+        Me.DataSetCiudadesBindingSource.Position = 0
+        '
+        'CiudadesBindingSource4
+        '
+        Me.CiudadesBindingSource4.DataMember = "Ciudades"
+        Me.CiudadesBindingSource4.DataSource = Me.DataSetCiudades
+        '
+        'bt_Agregar
+        '
+        Me.bt_Agregar.Location = New System.Drawing.Point(614, 39)
+        Me.bt_Agregar.Name = "bt_Agregar"
+        Me.bt_Agregar.Size = New System.Drawing.Size(150, 25)
+        Me.bt_Agregar.TabIndex = 23
+        Me.bt_Agregar.Text = "Añadir"
+        Me.bt_Agregar.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 640)
+        Me.Controls.Add(Me.bt_Agregar)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.orden_page)
         Me.Controls.Add(Me.label7)
@@ -373,8 +384,8 @@ Partial Class Form1
         Me.Controls.Add(Me.Label1)
         Me.Name = "Form1"
         Me.Text = "Form1"
-        CType(Me.DataSetCiudades, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CiudadesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSetCiudades, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CiudadesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CiudadesBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CiudadesBindingSource3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -421,4 +432,5 @@ Partial Class Form1
     Friend WithEvents ObservacionesDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents CiudadesBindingSource4 As BindingSource
     Friend WithEvents DataSetCiudadesBindingSource As BindingSource
+    Friend WithEvents bt_Agregar As Button
 End Class

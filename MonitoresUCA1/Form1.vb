@@ -1,4 +1,6 @@
-﻿Public Class Form1
+﻿Imports System.Data.SqlClient
+
+Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'DataSetCiudades.Ciudades' table. You can move, or remove it, as needed.
         Me.CiudadesTableAdapter.Fill(Me.DataSetCiudades.Ciudades)
@@ -45,5 +47,35 @@
     Private Sub bt_Ultimo_Click(sender As Object, e As EventArgs) Handles bt_Ultimo.Click
         CiudadesBindingSource.Position = CiudadesBindingSource.Count
         MostrarPosicion()
+    End Sub
+
+
+
+    Private Sub bt_Guardar_Click(sender As Object, e As EventArgs) Handles bt_Guardar.Click
+
+
+    End Sub
+
+    Private Sub bt_Agregar_Click(sender As Object, e As EventArgs) Handles bt_Agregar.Click
+        Dim miTabla As DataTable = DataSetCiudades.Ciudades
+        Dim i As Integer = DataSetCiudades.Ciudades.Count
+        Dim cfila As DataRowCollection = miTabla.Rows
+        Dim nuevaFila As DataRow
+        i += 1
+
+        Try
+            nuevaFila = miTabla.NewRow()
+            nuevaFila(0) = i
+            nuevaFila(1) = "Nombre " & i
+            nuevaFila(2) = True
+            nuevaFila(3) = "Observaciones " & i
+            cfila.Add(nuevaFila)
+            bt_Ultimo.PerformClick()
+            MostrarPosicion()
+            txt_nombre.Focus()
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 End Class
