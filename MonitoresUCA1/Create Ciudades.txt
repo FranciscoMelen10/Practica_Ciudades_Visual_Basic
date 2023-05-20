@@ -1,0 +1,7 @@
+
+CREATE TABLE Ciudades(
+id int PRIMARY KEY NOT NULL IDENTITY(1,1) , 
+nombre varchar(50) NOT NULL,
+estado bit NOT NULL,
+observaciones varchar(150) NOT NULL
+);

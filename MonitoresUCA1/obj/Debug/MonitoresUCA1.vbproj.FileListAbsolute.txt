@@ -10,3 +10,17 @@ C:\Users\Isi33\source\repos\MonitoresUCA1\MonitoresUCA1\obj\Debug\MonitoresUCA1.
 C:\Users\Isi33\source\repos\MonitoresUCA1\MonitoresUCA1\obj\Debug\MonitoresUCA1.exe
 C:\Users\Isi33\source\repos\MonitoresUCA1\MonitoresUCA1\obj\Debug\MonitoresUCA1.xml
 C:\Users\Isi33\source\repos\MonitoresUCA1\MonitoresUCA1\obj\Debug\MonitoresUCA1.pdb
+D:\PROGRAMACION\Repositorios\Práctica de Laboratorio Navegación de Registros CRUD\Practica_Ciudades_Visual_Basic\MonitoresUCA1\bin\Debug\MonitoresUCA1.exe.config
+D:\PROGRAMACION\Repositorios\Práctica de Laboratorio Navegación de Registros CRUD\Practica_Ciudades_Visual_Basic\MonitoresUCA1\bin\Debug\MonitoresUCA1.exe
+D:\PROGRAMACION\Repositorios\Práctica de Laboratorio Navegación de Registros CRUD\Practica_Ciudades_Visual_Basic\MonitoresUCA1\bin\Debug\MonitoresUCA1.pdb
+D:\PROGRAMACION\Repositorios\Práctica de Laboratorio Navegación de Registros CRUD\Practica_Ciudades_Visual_Basic\MonitoresUCA1\bin\Debug\MonitoresUCA1.xml
+D:\PROGRAMACION\Repositorios\Práctica de Laboratorio Navegación de Registros CRUD\Practica_Ciudades_Visual_Basic\MonitoresUCA1\obj\Debug\MonitoresUCA1.vbprojAssemblyReference.cache
+D:\PROGRAMACION\Repositorios\Práctica de Laboratorio Navegación de Registros CRUD\Practica_Ciudades_Visual_Basic\MonitoresUCA1\obj\Debug\MonitoresUCA1.Resources.resources
+D:\PROGRAMACION\Repositorios\Práctica de Laboratorio Navegación de Registros CRUD\Practica_Ciudades_Visual_Basic\MonitoresUCA1\obj\Debug\MonitoresUCA1.vbproj.GenerateResource.cache
+D:\PROGRAMACION\Repositorios\Práctica de Laboratorio Navegación de Registros CRUD\Practica_Ciudades_Visual_Basic\MonitoresUCA1\obj\Debug\MonitoresUCA1.vbproj.CoreCompileInputs.cache
+D:\PROGRAMACION\Repositorios\Práctica de Laboratorio Navegación de Registros CRUD\Practica_Ciudades_Visual_Basic\MonitoresUCA1\obj\Debug\MonitoresUCA1.exe
+D:\PROGRAMACION\Repositorios\Práctica de Laboratorio Navegación de Registros CRUD\Practica_Ciudades_Visual_Basic\MonitoresUCA1\obj\Debug\MonitoresUCA1.xml
+D:\PROGRAMACION\Repositorios\Práctica de Laboratorio Navegación de Registros CRUD\Practica_Ciudades_Visual_Basic\MonitoresUCA1\obj\Debug\MonitoresUCA1.pdb
+D:\PROGRAMACION\Repositorios\Práctica de Laboratorio Navegación de Registros CRUD\Practica_Ciudades_Visual_Basic\MonitoresUCA1\obj\Debug\MonitoresUCA1.FormPadre.resources
+D:\PROGRAMACION\Repositorios\Práctica de Laboratorio Navegación de Registros CRUD\Practica_Ciudades_Visual_Basic\MonitoresUCA1\obj\Debug\MonitoresUCA1.Frm_Presentacion.resources
+D:\PROGRAMACION\Repositorios\Práctica de Laboratorio Navegación de Registros CRUD\Practica_Ciudades_Visual_Basic\MonitoresUCA1\obj\Debug\MonitoresUCA1.Frm_Ciudades.resources
